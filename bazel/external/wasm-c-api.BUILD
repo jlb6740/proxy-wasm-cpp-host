@@ -10,7 +10,7 @@ cc_library(
         "include/wasm.h",
     ],
     deps = [
-        "@com_github_bytecodealliance_wasmtime//:rust_c_api",
+        "@com_github_jlb6740_wasmtime//:rust_c_api",
     ],
 )
 
@@ -33,7 +33,7 @@ genrule(
 genrule(
     name = "prefixed_wasmtime_c_api_lib",
     srcs = [
-        "@com_github_bytecodealliance_wasmtime//:rust_c_api",
+        "@com_github_jlb6740_wasmtime//:rust_c_api",
     ],
     outs = [
         "prefixed_wasmtime_c_api.a",

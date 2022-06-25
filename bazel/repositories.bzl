@@ -197,13 +197,22 @@ def proxy_wasm_cpp_host_repositories():
 
     # Wasmtime with dependencies.
 
+ #   maybe(
+ #       http_archive,
+ #       name = "com_github_bytecodealliance_wasmtime",
+ #       build_file = "@proxy_wasm_cpp_host//bazel/external:wasmtime.BUILD",
+ #       sha256 = "6e10746bd5141eebb1ba235b91cc042b743d7240f636be163a2c01bc0444ba68",
+ #       strip_prefix = "wasmtime-0.36.0",
+ #       url = "https://github.com/bytecodealliance/wasmtime/archive/v0.36.0.tar.gz",
+ #   )
+
     maybe(
-        http_archive,
-        name = "com_github_bytecodealliance_wasmtime",
+        new_git_repository,
+        name = "com_github_jlb6740_wasmtime",
+        #branch = "capi-with-default-debug-vtune-support",
         build_file = "@proxy_wasm_cpp_host//bazel/external:wasmtime.BUILD",
-        sha256 = "6e10746bd5141eebb1ba235b91cc042b743d7240f636be163a2c01bc0444ba68",
-        strip_prefix = "wasmtime-0.36.0",
-        url = "https://github.com/bytecodealliance/wasmtime/archive/v0.36.0.tar.gz",
+        commit = "b7ea51a0da7d57054e481f87225ff880debeedd2",
+        remote = "https://github.com/jlb6740/wasmtime.git",
     )
 
     maybe(
