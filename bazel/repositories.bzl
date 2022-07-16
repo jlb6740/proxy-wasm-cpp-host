@@ -61,11 +61,12 @@ def proxy_wasm_cpp_host_repositories():
         name = "com_github_jlb6740_wasmtime",
         build_file = "@proxy_wasm_cpp_host//bazel/external:wasmtime.BUILD",
         #sha256 = "e95d274822ac72bf06355bdfbeddcacae60d7e98fec8ee4b2e21740636fb5c2c",
-        sha256 = "78b74a6255cc2a42230e466b4cb73dce31a1827b4607910f0a4190dfe07d195f",
+        #sha256 = "78b74a6255cc2a42230e466b4cb73dce31a1827b4607910f0a4190dfe07d195f",
+        sha256 = "0086c5c8b662f2560661f81b02eff53da41782c5d9c7d8b404f1a5b627fb0f39",
         #strip_prefix = "wasmtime-0.26.0",
-        strip_prefix = "wasmtime-1",
+        strip_prefix = "wasmtime-2",
         #url = "https://github.com/bytecodealliance/wasmtime/archive/v0.26.0.tar.gz",
-        url = "https://github.com/jlb6740/wasmtime/archive/refs/tags/v1.tar.gz"
+        url = "https://github.com/jlb6740/wasmtime/archive/refs/tags/v2.tar.gz"
     )
 
     http_archive(
